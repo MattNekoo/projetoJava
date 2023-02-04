@@ -1,0 +1,115 @@
+// IF ELSE
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int x = sc.nextInt();
+		String dia;
+
+		if (x == 1) {
+			dia = "domingo";
+		} else if (x == 2) {
+			dia = "segunda";
+		} else if (x == 3) {
+			dia = "terça";
+		} else if (x == 4) {
+			dia = "quarta";
+		} else if (x == 5) {
+			dia = "quinta";
+		} else if (x == 6) {
+			dia = "sexta";
+		} else if (x == 7) {
+			dia = "sabado";
+		} else {
+			dia = "valor inválido";
+		}
+
+		System.out.println("Dia da semana: " + dia);
+
+		sc.close();
+	}
+
+}
+
+//Switch Case
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int x = sc.nextInt();
+		String dia;
+
+		switch (x){
+			case 1:
+				dia = "Domingo";
+				break;
+			case 2:
+				dia = "Segunda";
+				break;
+			default:
+				dia = "Inválido";
+				break;
+		}
+
+		System.out.println("Dia da semana: " + dia);
+
+		sc.close();
+	}
+
+}
+
+//while
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int x = sc.nextInt();
+		
+		int soma = 0;
+		
+		while(x != 0) {
+			soma += x;
+		    x = sc.nextInt();
+		}
+		
+		System.out.println(soma);
+		
+		sc.close();
+	}
+
+}
+
+//DO WHILE
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		char resp;
+		
+		
+		do {
+			System.out.printf("Digite a temperatura em celsius: ");
+			double c = sc.nextDouble();
+			double f = 9.0 * c / 5.0 + 32.0;
+			System.out.printf("Fahrenheit: %.1f%n ", f);
+			System.out.println("Deseja repetir? (s/n) ");
+			resp = sc.next().charAt(0);
+		}	 while ( resp != 'n');
+		
+		sc.close();
+	}
+
+}
